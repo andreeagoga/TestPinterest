@@ -14,4 +14,15 @@ public class AccountSteps {
     public void login_confirmation(String text){
         assertEquals(accountPage.login_confirmation_text(), text);
     }
+
+    @Step
+    public void enter_words_to_search(String text){
+        accountPage.get_search_box_text(text);
+    }
+
+    @Step
+    public void select_save_image() {
+        accountPage.select_image();
+        accountPage.save_image();
+    }
 }

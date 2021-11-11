@@ -23,4 +23,17 @@ public class AccountTest extends BaseClass{
         accountSteps.login_confirmation("Andreea Ioana.goga");
     }
 
+    @Test
+    public void search_images() {
+        accountSteps.enter_words_to_search("home decor ideas");
+        accountSteps.enter_words_to_search("wedding dress");
+        accountSteps.enter_words_to_search("fruits");
+    }
+
+    @Test
+    public void save_images() {
+        accountSteps.enter_words_to_search("kids activities");
+        accountSteps.select_save_image();
+    }
+
 }
