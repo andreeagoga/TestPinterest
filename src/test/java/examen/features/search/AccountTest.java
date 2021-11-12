@@ -4,6 +4,7 @@ import examen.steps.serenity.AccountSteps;
 import examen.steps.serenity.LoginSteps;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Managed;
+import net.thucydides.core.annotations.Pending;
 import net.thucydides.core.annotations.Steps;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -19,15 +20,20 @@ public class AccountTest extends BaseClass{
     public AccountSteps accountSteps;
 
     @Test
-    public void confirm_login(){
-        accountSteps.login_confirmation("Andreea Ioana.goga");
+    public void login_confirmation(){
+        accountSteps.confirm_login("Andreea Ioana.goga");
     }
 
     @Test
     public void search_images() {
-        accountSteps.enter_words_to_search("home decor ideas");
         accountSteps.enter_words_to_search("wedding dress");
-        accountSteps.enter_words_to_search("fruits");
+    }
+
+    @Pending
+    @Test
+    public void search_confirmation(){
+        accountSteps.enter_words_to_search("apple");
+        accountSteps.confirm_search("apple");
     }
 
     @Test

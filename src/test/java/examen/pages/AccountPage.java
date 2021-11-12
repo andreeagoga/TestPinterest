@@ -5,6 +5,7 @@ import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.pages.PageObject;
 
 import java.util.List;
+import java.util.Locale;
 
 public class AccountPage extends PageObject {
 
@@ -17,10 +18,13 @@ public class AccountPage extends PageObject {
     @FindBy(name = "searchBoxInput")
     private WebElementFacade searchBox;
 
-    @FindBy(css = "#__PWS_ROOT__ > div.App.AppBase > div.appContent > div > div > div > div > div.gridCentered > div > div > div:nth-child(1) > div:nth-child(1)")
+    @FindBy(css ="#__PWS_ROOT__ > div.App.AppBase > div.appContent > div > div > div > div.Closeup.Module.flex.flex-auto.justify-around.flex-column > div > div > div > div > div.m2F.zI7.iyn.Hsu > div > div > div > div > div > div > div > div > div:nth-child(2) > div > div.Jea.jzS.zI7.iyn.Hsu > div > div > div:nth-child(2) > div > div > div > div > div > a > h1")
+    private WebElementFacade confirmSearchText;
+
+    @FindBy(css = "#__PWS_ROOT__ > div.App.AppBase > div.appContent > div > div > div.zI7.iyn.Hsu > div.zI7.iyn.Hsu > div:nth-child(1) > div > div > div > div:nth-child(1) > div:nth-child(2) > div > div")
     private List<WebElementFacade> selectImage;
 
-    @FindBy(css = "#__PWS_ROOT__ > div.App.AppBase > div.appContent > div > div > div > div.Closeup.Module.flex.flex-auto.justify-around.flex-column > div > div > div > div > div.m2F.zI7.iyn.Hsu > div > div > div > div > div > div > div > div > div:nth-child(2) > div > div.qiB > div > div > div > div.Pyg.zI7.iyn.Hsu")
+    @FindBy(css="#__PWS_ROOT__ > div.App.AppBase > div.appContent > div > div > div > div.Closeup.Module.flex.flex-auto.justify-around.flex-column > div > div > div > div > div.m2F.zI7.iyn.Hsu > div > div > div > div > div > div > div > div > div:nth-child(2) > div > div.qiB > div > div > div > div.Pyg.zI7.iyn.Hsu")
     private WebElementFacade saveButton;
 
     public String login_confirmation_text(){
@@ -30,6 +34,10 @@ public class AccountPage extends PageObject {
 
     public void get_search_box_text(String text) {
         searchBox.typeAndEnter(text);
+    }
+
+    public String confirm_correct_search(){
+        return confirmSearchText.getText();
     }
 
     public void select_image() {

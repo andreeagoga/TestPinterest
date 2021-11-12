@@ -11,13 +11,18 @@ public class AccountSteps {
     private AccountPage accountPage;
 
     @Step
-    public void login_confirmation(String text){
+    public void confirm_login(String text){
         assertEquals(accountPage.login_confirmation_text(), text);
     }
 
     @Step
     public void enter_words_to_search(String text){
         accountPage.get_search_box_text(text);
+    }
+
+    @Step
+    public void confirm_search(String text){
+        assertEquals(accountPage.confirm_correct_search(), text);
     }
 
     @Step
