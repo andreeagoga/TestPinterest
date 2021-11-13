@@ -9,14 +9,14 @@ public class LoginSteps {
     @Step
     public void is_the_home_page() {
         loginPage.open();
-//        loginPage.getDriver().manage().window().maximize();
+        loginPage.getDriver().manage().window().maximize();
     }
 
     @Step
     public void enters_data_and_click_login(String email, String password) {
-        loginPage.push_login_button();
-        loginPage.enter_email(email);
-        loginPage.enter_password(password);
-        loginPage.push_submit_button();
+        loginPage.set_login_button();
+        loginPage.set_email(email);
+        loginPage.set_password(password);
+        loginPage.set_submit_button();
     }
 }

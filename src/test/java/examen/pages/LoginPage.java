@@ -21,19 +21,19 @@ public class LoginPage extends PageObject {
         @FindBy(css = "#__PWS_ROOT__ > div:nth-child(1) > div > div > div > div:nth-child(2) > div.Jea.MIw.TpD.mQ8.sLG.zI7.iyn.Hsu > div.Jea.MIw.QLY.Rym.jzS.mQ8.ojN.p6V.prG.sLG.zI7.iyn.Hsu > div > div > div > div > div > div > div > div:nth-child(4) > form > div:nth-child(5) > button")
         private WebElementFacade submitButton;
 
-        public void push_login_button(){
+        public void set_login_button(){
                 loginButton.click();
         }
 
-        public void enter_email(String email){
+        public void set_email(String email){
                 emailTextBox.type(email);
         }
 
-        public void enter_password(String password){
+        public void set_password(String password){
                 passwordTextBox.type(password);
         }
 
-        public void push_submit_button(){
+        public void set_submit_button(){
                 submitButton.click();
         }
 
