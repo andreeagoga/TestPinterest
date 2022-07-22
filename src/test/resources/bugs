@@ -1,0 +1,8 @@
+//BUGS
+//1.Nu se retrage bara de meniu pentru a accesa setarea de creare director (ProfilePage, linia 11)
+//2.Exista doua "+" care creaza un director/pin
+//3.Poti salva o imagine de foarte multe ori
+//4.Uneori nu iti arata ca imaginea e Saved sau nu, doar dupa ce dai refresh
+//5.Nu apare acelasi mesaj sub imaginea creata, astfel trebuie uneori sa dai refresh(nu am putut identifica imaginea dupa text)
+//6.La login cu email gresit, nu afiseaza tot timpul pe ecran mesajul de eroare
+//7.Daca trebuie sa stergi o imagine cateodata trebuie sa apesi de doua ori pe edit sau trebuie sa dai refresh pentru a o sterge
